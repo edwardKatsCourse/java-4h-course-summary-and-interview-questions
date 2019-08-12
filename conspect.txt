@@ -1,0 +1,92 @@
+1. Java memory model
+primitives - by value
+object	   - by reference
+
+final 
+fields, methods, classes
+final field: 
+- this reference cannot be reassigned
+- field MUST be initialized once (обязано быть присвоено один раз)
+
+
+public final String CONSTANT = "abc";
+
+class Person {
+	public final static String organization;
+	private String name;
+	private String position; 
+	
+	public Person (String name, String position) {
+		this.organization = "Tel-Ran";
+		this.name = name;
+		this.position = position;
+	}
+}
+
+
+final method - cannot override
+final class - cannot extend
+
+interfaces and functional interfaces
+
+functional interface - interface with single method
+"default" and "static" keywords
+interfaces have no constructors
+---------------------------------------------------
+Top Level   	vs 		Nested
+
+Nested:
+- anonimous
+
+- static nested
+- inner
+- local
+Java Collection Framework
+List	
+	AL - очередь по номеркам
+	LL - живая очередь (помним кто за кем)
+Set		
+	HashSet			-> 	bucket | equals & hashCode
+	TreeSet			-> 	left 	-  root 	- right
+						smaller	- average	- greater
+	LinkedHashSet
+Map
+	HashMap
+	TreeMap
+	LinkedHashMap <Key, Apartment>
+
+Exceptions
+
+	Throwable
+Errors		  Exceptions
+		Exception	RuntimeException
+
+
+class
+interface
+@interface
+enum
+
+source
+1. operation (action, pipe) - filter, map, flatMap
+2. terminal operation - (forEach, reduce, collect)
+			
+		flattening (flatMap)
+[[1,2,3], [4,5,6]] -> [1,2,3,4,5,6]
+
+
+List<Parent> list1 = ..
+List<Child> list2 = ..
+
+nonvariance
+list1 = list2
+
+Object [] o = [] ;
+String [] s = [];
+convariance
+
+contravariance
+s = o
+
+
+
